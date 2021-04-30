@@ -1,20 +1,27 @@
 import React, { Component, Fragment } from "react";
 
 class Register extends Component {
-  state = {
-    username: "",
-    email: "",
-    password: "",
-  };
-  handleChange = e => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      email: "",
+      password: "",
+    };
+    //bind this key word
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(e) {
+    console.log(this); //undefined we dont want undefined needed bound this function
     //update state in react use this.setState() method
     this.setState({ [e.target.name]: e.target.value });
-  };
+  }
 
-  handleSubmit = e => {
+  handleSubmit(e) {
     e.preventDefault();
     console.log(this.state);
-  };
+  }
   render() {
     return (
       <Fragment>
@@ -23,7 +30,7 @@ class Register extends Component {
             <h2 className="h2 font-weight-bold text-uppercase text-success">
               Register
             </h2>
-            <form id="registerForm" onSubmit={this.handleSubmit}>
+            <form id="registerForm" onSubmit={(e) => this.handleSubmit(e)}>
               <div className="form-group">
                 <label htmlFor="username">username</label>
                 <input
@@ -32,7 +39,7 @@ class Register extends Component {
                   id="username"
                   name="username"
                   value={this.state.username}
-                  onChange={this.handleChange}
+                  onChange={(e) => this.handleChange(e)}
                   placeholder="enter username"
                 />
               </div>
@@ -45,7 +52,7 @@ class Register extends Component {
                   id="email"
                   name="email"
                   value={this.state.email}
-                  onChange={this.handleChange}
+                  onChange={(e) => this.handleChange(e)}
                   placeholder="enter email"
                 />
               </div>
@@ -58,7 +65,7 @@ class Register extends Component {
                   id="password"
                   name="password"
                   value={this.state.password}
-                  onChange={this.handleChange}
+                  onChange={(e) => this.handleChange(e)}
                   placeholder="enter password"
                 />
               </div>

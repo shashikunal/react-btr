@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import ContactForm from "./Components/ContactForm";
 import HeaderComponent from "./Components/HeaderComponent";
-import Register from "./Components/Register";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
             <HeaderComponent />
           </header>
           <main>
-            <Register />
+            <ContactForm />
           </main>
           <footer></footer>
         </article>
