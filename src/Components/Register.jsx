@@ -30,7 +30,7 @@ class Register extends Component {
             <h2 className="h2 font-weight-bold text-uppercase text-success">
               Register
             </h2>
-            <form id="registerForm" onSubmit={(e) => this.handleSubmit(e)}>
+            <form id="registerForm" onSubmit={e => this.handleSubmit(e)}>
               <div className="form-group">
                 <label htmlFor="username">username</label>
                 <input
@@ -39,7 +39,7 @@ class Register extends Component {
                   id="username"
                   name="username"
                   value={this.state.username}
-                  onChange={(e) => this.handleChange(e)}
+                  onChange={e => this.handleChange(e)}
                   placeholder="enter username"
                 />
               </div>
@@ -52,7 +52,7 @@ class Register extends Component {
                   id="email"
                   name="email"
                   value={this.state.email}
-                  onChange={(e) => this.handleChange(e)}
+                  onChange={e => this.handleChange(e)}
                   placeholder="enter email"
                 />
               </div>
@@ -65,7 +65,7 @@ class Register extends Component {
                   id="password"
                   name="password"
                   value={this.state.password}
-                  onChange={(e) => this.handleChange(e)}
+                  onChange={e => this.handleChange(e)}
                   placeholder="enter password"
                 />
               </div>

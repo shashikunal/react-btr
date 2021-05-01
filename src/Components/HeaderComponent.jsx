@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import { Link } from "react-router-dom";
 const HeaderComponent = () => {
   return (
     <Fragment>
@@ -27,24 +27,19 @@ const HeaderComponent = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Features
-                </a>
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Pricing
-                </a>
+                <Link className="nav-link" to="/register">
+                  Register
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link disabled"
-                  href="/"
-                  tabIndex={-1}
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
+                <Link className="nav-link" to="/contact" aria-disabled="true">
+                  contact us
+                </Link>
               </li>
             </ul>
           </div>
