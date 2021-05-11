@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
-const Login = () => {
+import Profiles from "./Profiles";
+const Login = props => {
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
@@ -19,7 +19,7 @@ const Login = () => {
     <section className="card col-md-3 my-4 mx-auto">
       <article className="card-body">
         <h2 className="text-uppercase font-weight-bold text-center text-primary">
-          login
+          login with {props.profile.trainer}
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -55,4 +55,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Profiles(Login);

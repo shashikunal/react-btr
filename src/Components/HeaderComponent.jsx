@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-const HeaderComponent = () => {
+import MenuComponent from "./MenuComponent";
+const HeaderComponent = props => {
   return (
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
@@ -20,28 +21,7 @@ const HeaderComponent = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="/">
-                  Home <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/register">
-                  Register
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact" aria-disabled="true">
-                  contact us
-                </Link>
-              </li>
-            </ul>
+            <MenuComponent users={props.users} />
           </div>
         </div>
       </nav>

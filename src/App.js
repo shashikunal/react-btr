@@ -15,7 +15,7 @@ class App extends Component {
         <article>
           <Router>
             <header>
-              <HeaderComponent />
+              <HeaderComponent users={this.state} />
             </header>
             <main>
               <Switch>
@@ -26,7 +26,7 @@ class App extends Component {
                 />
                 {/* react router 4 way render component and  custom props. */}
                 <Route path="/login" exact>
-                  <Login username="shashikunal" />
+                  <Login users={this.state} />
                 </Route>
                 {/* react router 5 way render component and  custom props. */}
                 <Route path="/register" exact component={Register} />
