@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import ContactForm from "./Components/ContactForm";
 import PagenotFound from "./Components/PagenotFound";
+import LifeCycleMethods from "./Components/LifeCycleMethods";
 
 //react router dom 4 version way
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
                 {/* react router 5 way render component and  custom props. */}
                 <Route path="/register" exact component={Register} />
                 <Route path="/contact" exact component={ContactForm} />
+                <Route path="/lifecycle" exact component={LifeCycleMethods} />
                 <Route path="*" component={PagenotFound} />
               </Switch>
             </main>

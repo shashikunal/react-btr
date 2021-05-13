@@ -26,8 +26,8 @@ const MenuComponent = props => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/" aria-disabled="true">
-            {props.profile.trainer}
+          <Link className="nav-link" to="/lifecycle" aria-disabled="true">
+            Life cycle methods
           </Link>
         </li>
       </ul>

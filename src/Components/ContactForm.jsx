@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { withRouter } from "react-router-dom";
 class ContactForm extends Component {
   constructor() {
     super();
@@ -20,6 +20,10 @@ class ContactForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.state);
+    //react router redirection
+    this.props.history.push("/");
+    //normal window redirection
+    // window.location.assign("/");
   }
 
   render() {
@@ -92,4 +96,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default withRouter(ContactForm);
